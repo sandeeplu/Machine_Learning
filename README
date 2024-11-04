@@ -1,0 +1,42 @@
+**********Predicting Lipophilicity with Graph Neural Networks (GNNs)**********
+
+This tutorial will guide you through predicting the lipophilicity of molecules by transforming molecular data into graphs, feeding the graphs into a GNN model, and evaluating its performance.
+
+Requirements:
+RDKit for cheminformatics tasks
+torch_geometric for graph-based deep learning
+pandas, numpy, matplotlib, seaborn for data handling and visualization
+
+1. Setting a Random Seed
+
+To ensure reproducibility, we set a fixed random seed:
+
+2. Load and Inspect the Dataset
+We begin by loading a CSV file with SMILES representations and experimental lipophilicity values.
+
+3. Data Analysis
+We perform some exploratory data analysis to understand the distribution of lipophilicity and molecular weights.Play with database to gain insights.
+
+4. Analyzing Atomic Composition
+
+We analyze the atomic composition of the molecules in the dataset.
+
+5. Graph Generation
+Each molecule is represented as a graph, with atoms as nodes and bonds as edges. We generate graphs from SMILES using torch_geometric.utils.from_smiles.
+
+6. Dataset Class for PyTorch Geometric
+
+We create a custom dataset class, MyOwnDataset, for efficient data management with PyTorch Geometric.
+
+7. Train-Test Split
+
+8. Model Definition: AttentiveFP
+We use AttentiveFP, a GNN model that leverages attention mechanisms for molecular graphs.
+
+9. Training and Testing Functions
+10. Training the Model
+11. Model Evaluation
+Using R-squared (R²) and root mean squared error (RMSE) for evaluating model performance:
+
+12. Visualizing Results
+We plot actual vs. predicted values and residuals.
